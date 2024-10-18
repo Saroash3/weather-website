@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather and Chatbot Dashboard</title>
+    <link rel="stylesheet" href="style_2.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Weather App</h2>
+        <button id="dashboard-btn"><a href="./index.html">Dashboard</a></button>
+        <button id="tables-btn"> <a href="./tables.html">Tables</a></button>
+    </div>
+
+    <div class="main">
+        <div class="search-bar">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button id="get-weather-btn">Get Weather</button>
+        </div>
+
+        <div class="content">
+            <div class="forecast-table">
+                <h3>5-Day Forecast</h3>
+                <table id="weather-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Temperature (°C)</th>
+                            <th>Weather</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="pagination">
+                    <button id="prev-btn">Previous</button>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
+
+            <div class="chatbot">
+                <h3>Chatbot</h3>
+                <div id="chat-bar">
+                    <input type="text" id="chat-input" placeholder="Ask me anything...">
+                    <button id="send-btn">Send</button>
+                </div>
+                <div id="chat-response"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script_2.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Weather App</h2>
+        <button id="dashboard-btn"><a href="./index.html">Dashboard</a></button>
+        <button id="tables-btn"><a href="./tables.html">Tables</a></button>
+    </div>
+
+    <div class="main">
+        <div class="search-bar">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button id="get-weather-btn">Get Weather</button>
+        </div>
+
+        <div id="weather-widget" class="weather-widget">
+            <h2 id="city-name"></h2>
+            <p id="description"></p>
+            <p>Temperature: <span id="temp"></span> °C</p>
+            <p>Humidity: <span id="humidity"></span>%</p>
+            <p>Wind Speed: <span id="wind-speed"></span> m/s</p>
+            <img class='icon'>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-box">
+                <h3>Vertical Bar Chart</h3>
+                <canvas id="bar-chart" class="chart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h3>Doughnut Chart</h3>
+                <canvas id="doughnut-chart" class="chart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h3>Line Chart</h3>
+                <canvas id="line-chart" class="chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
